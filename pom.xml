@@ -11,12 +11,15 @@
 
 
     <modules>
-        <module>blog-db</module>
-        <module>blog-user</module>
+        <module>blog-db</module>        <!-- 数据库操作 -->
+        <module>blog-user</module>      <!-- 用户业务 -->
+        <module>blog-common</module>    <!-- 通用工具类,常量,枚举等 -->
+        <module>blog-admin</module>
+        <module>blog-redis</module>     <!-- 后台管理模块 -->
     </modules>
 
     <properties>
-        <version>1.0-SNAPSHOT</version>
+        <module_version>1.0-SNAPSHOT</module_version>
     </properties>
 
     <!-- 依赖管理 -->
@@ -25,7 +28,12 @@
             <dependency>
                 <groupId>com.blog</groupId>
                 <artifactId>blog-db</artifactId>
-                <version>${version}</version>
+                <version>${module_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.blog</groupId>
+                <artifactId>blog-common</artifactId>
+                <version>${module_version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -57,6 +65,23 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- fast json 依赖 -->
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.55</version>
+        </dependency>
+
+        <!-- apache common lang 依賴 -->
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>

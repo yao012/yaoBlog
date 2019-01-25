@@ -16,6 +16,15 @@
             <groupId>com.blog</groupId>
             <artifactId>blog-db</artifactId>
         </dependency>
+
+        <!-- spring boot + jta + atomikos  -->
+        <!-- jta : java transaction api -->
+        <!-- atomikos : Atomikos TransactionsEssentials 是一个为Java平台提供增值服务的并且开源类事务管理器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jta-atomikos</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

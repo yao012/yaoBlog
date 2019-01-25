@@ -6,9 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="blogadmin" />
+        <module name="blogcommon" />
         <module name="blogdb" />
+        <module name="blogredis" />
         <module name="bloguser" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="blogCommon" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,42 @@
+########################################################
+
+###REDIS (RedisProperties) redis基本配置；
+
+########################################################
+
+spring:
+  redis:
+    # database name
+    database: 0
+    # server host
+    host: 127.0.0.1
+    # connect port
+    port: 6379
+    # 数据库连接超时时间,Spring boot 2.x 中该参数的类型为Duration,这里在配置的时候需要指明单位
+    timeout: 60s
+    # redis 密码
+    password: hWamkTnQQLm3A3B5JGX0u7UPp6OPnJn7
+    # 连接池配置,2.0中直接使用jedis或者lettuce配置连接池
+    jedis:
+      pool:
+        # 最大空闲连接数
+        max-idle: 8
+        # 最小空闲连接数
+        min-idle: 0
+        # 等待可用连接的最大时间，负数为不限制
+        max-wait: -1ms
+        # 最大活跃连接数，负数为不限制
+        max-active: 8
+
+
+
+
+
+
+# name of Redis server
+
+#spring.redis.sentinel.master=
+
+# comma-separated list of host:port pairs
+
+#spring.redis.sentinel.nodes=
